@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body
+{
+font-family:arial,sans-serif
+}
+</style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body style="margin:30px;padding:0px">
+
+<div style="text-align: center;"><IMG SRC="https://support.sas.com/documentation/onlinedoc/viya/images/ViyaCloud.JPG" ALT="image"></div>
+<br>
+<H1>Naloxone Incident Reporting System</H1>
+Please enter your Name, Health Status, Dose Amount, and Zipcode.  
+    <br>
+<FORM action= 'http://sasserver.demo.sas.com:8001/result' METHOD="POST" class="content">
+<br>
+  First name:
+  <input type="text" name="firstname" id="firstname" required><br>
+    <br>
+  Last name:
+  <input type="text" name="lastname" id="lastname"><br>
+    <br>
+  Health Status:<br>
+  <input type="radio" name="healthstatus" value="Fatal" id="healthstatus" checked> Fatal<br>
+  <input type="radio" name="healthstatus" value="Non-Fatal" id="healthstatus"> Non-Fatal<br>
+  <input type="radio" name="healthstatus" value="Unknown" id="healthstatus"> Other <br>
+    <br>
+  Dose Amount:
+  <input type="number" name="dose" id="dose"><br>
+    <br>
+  Zipcode:
+  <input type="text" name="zipcode" id="zipcode"><br>
+
+
+<BR>
+
+
+<INPUT TYPE="SUBMIT" class="button" VALUE="Update Information" />
+
+</FORM>
+</BODY>
+</HTML>
